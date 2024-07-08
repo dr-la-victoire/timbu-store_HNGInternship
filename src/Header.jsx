@@ -8,9 +8,9 @@ function Header() {
         <input placeholder="Search Products" />
       </div>
       <div className="header-icons">
-        <p>person</p>
-        <p>love</p>
-        <p>cart</p>
+        <p><i class="fa-solid fa-user"></i></p>
+        <p><i class="fa-solid fa-heart"></i></p>
+        <p><i class="fa-solid fa-cart-shopping"></i></p>
       </div>
     </header>
   );

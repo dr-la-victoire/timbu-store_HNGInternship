@@ -6,7 +6,6 @@ function MainText() {
       <h2>Cookware Collection</h2>
       <div className="main-small">
         <p>6 items found</p>
-        <button>Sort by</button>
       </div>
     </div>
   );

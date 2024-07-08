@@ -7,11 +7,6 @@ function MainElements() {
         <div className="available">
           <p>Available colors</p>
         </div>
-        <div className="circles">
-          <p>1</p>
-          <p>1</p>
-          <p>1</p>
-        </div>
       </div>
       <div className="sizes">
         <div className="size-text">
