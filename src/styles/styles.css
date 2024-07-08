@@ -579,12 +579,11 @@ button {
   }
 
   .footer-link-list ul {
-    width: 50%;
-    margin-left: 1em;
+    width: 100%;
+    margin-left: 0;
   }
 
-  .footer-link-list ul li {
-    display: block;
+  .footer-link-list ul li h1 {
     margin-left: 0;
     margin-right: 0;
   }
@@ -594,7 +593,7 @@ button {
   }
 
   .footer-link-list ul li:nth-child(n + 2) {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     text-align: center;
   }
