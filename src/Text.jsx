@@ -4,7 +4,13 @@ import MainElements from "./MainElements";
 function Text(props) {
   return (
     <div className="main-elements">
-      <img src={props.src} alt="Chef Store Equipment" />
+      <div className="img-container">
+        <img
+          src={props.src}
+          alt="Chef Store Equipment"
+          style={{ height: "300px" }}
+        />
+      </div>
       <div className="card-text">
         <h3>{props.header}</h3>
         <h3>{props.price}</h3>

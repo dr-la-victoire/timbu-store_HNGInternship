@@ -4,12 +4,24 @@ function Navbar() {
   return (
     <div className="nav">
       <ul>
-        <li>Cookware</li>
-        <li>Kitchen appliances</li>
-        <li>Bakeware</li>
-        <li>Knives</li>
-        <li>Cutlery</li>
-        <li>Contact us</li>
+        <a href="#">
+          <li>Cookware</li>
+        </a>
+        <a href="#">
+          <li>Kitchen appliances</li>
+        </a>
+        <a href="#">
+          <li>Bakeware</li>
+        </a>
+        <a href="#">
+          <li>Knives</li>
+        </a>
+        <a href="#">
+          <li>Cutlery</li>
+        </a>
+        <a href="#">
+          <li>Contact us</li>
+        </a>
       </ul>
     </div>
   );

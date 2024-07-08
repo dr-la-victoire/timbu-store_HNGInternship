@@ -39,12 +39,14 @@ const MainContent = () => {
   return (
     <main>
       <MainText />
-      <Text src={images[0]} header={header[0]} price={price[0]} />
-      <Text src={images[1]} header={header[1]} price={price[1]} />
-      <Text src={images[2]} header={header[2]} price={price[2]} />
-      <Text src={images[3]} header={header[3]} price={price[3]} />
-      <Text src={images[4]} header={header[4]} price={price[4]} />
-      <Text src={images[5]} header={header[5]} price={price[5]} />
+      <div className="grid-container">
+        <Text src={images[0]} header={header[0]} price={price[0]} />
+        <Text src={images[1]} header={header[1]} price={price[1]} />
+        <Text src={images[2]} header={header[2]} price={price[2]} />
+        <Text src={images[3]} header={header[3]} price={price[3]} />
+        <Text src={images[4]} header={header[4]} price={price[4]} />
+        <Text src={images[5]} header={header[5]} price={price[5]} />
+      </div>
     </main>
   );
 };

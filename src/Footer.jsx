@@ -4,24 +4,27 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-links">
-        <div className="footer-image">
-          <p>Insert</p>
-        </div>
-        <ul>
-          <li>
-            <h1>CHEF</h1>
-          </li>
-          <li>Kitchen appliances</li>
-          <li>Cookware</li>
-          <li>Bakeware</li>
-          <li>Knives</li>
-          <li>Cutlery</li>
-          <li>Contact us</li>
-          <li>
+        <div className="footer-link-list">
+          <ul>
+            <li>
+              <h1>CHEF</h1>
+            </li>
+            <li>Kitchen appliances</li>
+            <li>Cookware</li>
+            <li>Bakeware</li>
+            <li>Knives</li>
+            <li>Cutlery</li>
+            <li>Contact us</li>
+          </ul>
+          <div className="footer-button">
             <button>Sign up</button>
-          </li>
-        </ul>
+          </div>
+        </div>
+
         <div className="footer-contact">
+          <div className="footer-image">
+            <p>Insert</p>
+          </div>
           <div className="contact">
             <h5>Contact</h5>
             <p>+948-924-567-77-642</p>
@@ -34,10 +37,10 @@ function Footer() {
             <h5>Address</h5>
             <p>41 plot 5, Port-Harcourt, Nigeria</p>
           </div>
-          <div className="footer-end">
-            <p>&copy; 2023</p>
-            <p>Policy</p>
-          </div>
+        </div>
+        <div className="footer-end">
+          <p>&copy; 2023</p>
+          <p>Policy</p>
         </div>
       </div>
     </div>
