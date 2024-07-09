@@ -255,6 +255,28 @@ button {
   width: 100%;
 }
 
+.checkout {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
+.checkout button {
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.checkout button:hover {
+  cursor: pointer;
+  border: 2px solid #0a0a0a;
+}
+
+.checkout button:active {
+  background-color: #fff;
+  color: #db6a18;
+}
+
 /* FOOTER */
 .footer {
   margin-top: 1.5em;
@@ -287,11 +309,15 @@ button {
   font-size: 2rem;
 }
 
-.footer-link-list button {
-  width: 200%;
+.footer-link-list button,
+.checkout button {
   height: 40px;
   background-color: #db6a18;
   color: #fff;
+}
+
+.footer-link-list button {
+  width: 200%;
 }
 
 .footer-contact {
