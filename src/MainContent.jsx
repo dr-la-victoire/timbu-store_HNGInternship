@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import MainText from "./MainText";
 import Text from "./Text";
 import StainlessSteelPots from "./Images/stainless-steel-pots.jpg";
@@ -53,6 +54,11 @@ const MainContent = ({ addToCart }) => {
             <MainElements addToCart={addToCart} product={product} />
           </div>
         ))}
+      </div>
+      <div className="checkout">
+        <Link to="/checkout">
+          <button>Go to Checkout</button>
+        </Link>
       </div>
     </main>
   );
