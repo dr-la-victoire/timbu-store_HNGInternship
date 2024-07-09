@@ -1,6 +1,6 @@
 import React from "react";
 
-function MainElements() {
+function MainElements({ addToCart, product }) {
   return (
     <div className="main-elements-container">
       <div className="available-colours">
@@ -19,7 +19,7 @@ function MainElements() {
             <p>24</p>
           </div>
         </div>
-        <button>Add to cart</button>
+        <button onClick={() => addToCart(product)}>Add to cart</button>
       </div>
     </div>
   );

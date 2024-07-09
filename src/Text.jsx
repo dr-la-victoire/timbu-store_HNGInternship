@@ -1,5 +1,4 @@
 import React from "react";
-import MainElements from "./MainElements";
 
 function Text(props) {
   return (
@@ -19,7 +18,6 @@ function Text(props) {
         This S-quart pot is crafted from high-quality durable materials that
         ensure even heat distribut...
       </p>
-      <MainElements />
     </div>
   );
 }

@@ -7,45 +7,52 @@ import TransparentKettle from "./Images/transparent-kettle.jpg";
 import WoodenShelvesPots from "./Images/wooden-shelves-pots.jpg";
 import BronzePans from "./Images/bronze-pans.jpg";
 import OpenPot from "./Images/open-pot.jpg";
+import MainElements from "./MainElements";
 
-const MainContent = () => {
-  const images = [
-    StainlessSteelPots,
-    BlueFryingPan,
-    TransparentKettle,
-    WoodenShelvesPots,
-    BronzePans,
-    OpenPot,
-  ];
-
-  const header = [
-    "Classic Non-Stick Set",
-    "Stain-Free Frying Pan",
-    "Transparent Kettle",
-    "Superior Non-Stick Set",
-    "Non-Rust Frying Pan",
-    "Double Coat Non-Stick",
-  ];
-
-  const price = [
-    "N190,000",
-    "N90,000",
-    "N100,000",
-    "N290,000",
-    "N80,000",
-    "N100,000",
+const MainContent = ({ addToCart }) => {
+  const products = [
+    {
+      id: 1,
+      name: "Classic Non-Stick Set",
+      price: "N190,000",
+      image: StainlessSteelPots,
+    },
+    {
+      id: 2,
+      name: "Stain-Free Frying Pan",
+      price: "N90,000",
+      image: BlueFryingPan,
+    },
+    {
+      id: 3,
+      name: "Transparent Kettle",
+      price: "N100,000",
+      image: TransparentKettle,
+    },
+    {
+      id: 4,
+      name: "Superior Non-Stick Set",
+      price: "N290,000",
+      image: WoodenShelvesPots,
+    },
+    { id: 5, name: "Non-Rust Frying Pan", price: "N80,000", image: BronzePans },
+    { id: 6, name: "Double Coat Non-Stick", price: "N100,000", image: OpenPot },
   ];
 
   return (
     <main>
       <MainText />
       <div className="grid-container">
-        <Text src={images[0]} header={header[0]} price={price[0]} />
-        <Text src={images[1]} header={header[1]} price={price[1]} />
-        <Text src={images[2]} header={header[2]} price={price[2]} />
-        <Text src={images[3]} header={header[3]} price={price[3]} />
-        <Text src={images[4]} header={header[4]} price={price[4]} />
-        <Text src={images[5]} header={header[5]} price={price[5]} />
+        {products.map((product) => (
+          <div key={product.id}>
+            <Text
+              src={product.image}
+              header={product.name}
+              price={product.price}
+            />
+            <MainElements addToCart={addToCart} product={product} />
+          </div>
+        ))}
       </div>
     </main>
   );
