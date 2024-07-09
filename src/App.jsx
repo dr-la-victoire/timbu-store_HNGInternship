@@ -37,6 +37,11 @@ function Layout() {
     }, 1500);*/
   }
 
+  /* function to handle the click event to delete from cart
+  function removeFromCart(cart) {
+
+  }*/
+
   const showBrandComponent = !location.pathname.startsWith("/checkout");
 
   return (

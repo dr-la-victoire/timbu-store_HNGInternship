@@ -15,29 +15,29 @@ const MainContent = ({ addToCart }) => {
     {
       id: 1,
       name: "Classic Non-Stick Set",
-      price: "N190,000",
+      price: 190000,
       image: StainlessSteelPots,
     },
     {
       id: 2,
       name: "Stain-Free Frying Pan",
-      price: "N90,000",
+      price: 90000,
       image: BlueFryingPan,
     },
     {
       id: 3,
       name: "Transparent Kettle",
-      price: "N100,000",
+      price: 100000,
       image: TransparentKettle,
     },
     {
       id: 4,
       name: "Superior Non-Stick Set",
-      price: "N290,000",
+      price: 290000,
       image: WoodenShelvesPots,
     },
-    { id: 5, name: "Non-Rust Frying Pan", price: "N80,000", image: BronzePans },
-    { id: 6, name: "Double Coat Non-Stick", price: "N100,000", image: OpenPot },
+    { id: 5, name: "Non-Rust Frying Pan", price: 80000, image: BronzePans },
+    { id: 6, name: "Double Coat Non-Stick", price: 100000, image: OpenPot },
   ];
 
   return (
@@ -49,7 +49,7 @@ const MainContent = ({ addToCart }) => {
             <Text
               src={product.image}
               header={product.name}
-              price={product.price}
+              price={`N${product.price}`}
             />
             <MainElements addToCart={addToCart} product={product} />
           </div>
