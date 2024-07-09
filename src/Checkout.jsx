@@ -5,6 +5,14 @@ function Checkout({ cart }) {
     return accumulator + currentItem.price;
   }, 0);
 
+  function checkoutAlert() {
+    alert("Checked out successfully!");
+  }
+
+  function applyCode() {
+    alert("Promo code applied!");
+  }
+
   /*const totalItem = cart.reduce((accumulator, currentItem) => {
     return acc
   })*/
@@ -29,16 +37,6 @@ function Checkout({ cart }) {
                     <div className="cart-desc">
                       <p>{item.name}</p>
                       <p>{`N${item.price}`}</p>
-                      <div className="other-desc">
-                        <button>
-                          <i class="fa-solid fa-trash"></i>Delete
-                        </button>
-                      </div>
-                      <div className="quantity">
-                        <p>Quantity: 3</p>
-                        <button className="btn">+</button>
-                        <button className="btn">-</button>
-                      </div>
                     </div>
                   </li>
                 ))}
@@ -82,9 +80,11 @@ function Checkout({ cart }) {
             </table>
             <div className="promo-code">
               <input placeholder="Promo code" />
-              <button>Apply</button>
+              <button onClick={() => applyCode()}>Apply</button>
             </div>
-            <button className="checkout-button">Checkout</button>
+            <button className="checkout-button" onClick={() => checkoutAlert()}>
+              Checkout
+            </button>
           </div>
         </div>
       </main>
