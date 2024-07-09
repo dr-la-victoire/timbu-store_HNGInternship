@@ -1,27 +1,41 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 function Navbar() {
   return (
     <div className="nav">
       <ul>
-        <a href="#">
-          <li>Cookware</li>
-        </a>
-        <a href="#">
-          <li>Kitchen appliances</li>
-        </a>
-        <a href="#">
-          <li>Bakeware</li>
-        </a>
-        <a href="#">
-          <li>Knives</li>
-        </a>
-        <a href="#">
-          <li>Cutlery</li>
-        </a>
-        <a href="#">
-          <li>Contact us</li>
-        </a>
+        <li>
+          <NavLink to="/" exact activeClassName="active">
+            Cookware
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/kitchen" activeClassName="active">
+            Kitchen appliances
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/bakeware" activeClassName="active">
+            Bakeware
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/knives" activeClassName="active">
+            Knives
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/cutlery" activeClassName="active">
+            Cutlery
+          </NavLink>
+        </li>
+        <li>
+          <HashLink smooth to="/#contact-us">
+            Contact us
+          </HashLink>
+        </li>
       </ul>
     </div>
   );

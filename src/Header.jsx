@@ -4,6 +4,11 @@ function Header({ counter }) {
   return (
     <header>
       <div className="header-left">
+        <div className="nav-btn">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
         <h1>CHEF</h1>
         <input placeholder="Search Products" />
       </div>

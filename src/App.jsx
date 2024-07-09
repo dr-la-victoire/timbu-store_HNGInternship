@@ -7,6 +7,10 @@ import {
 } from "react-router-dom";
 import Header from "./Header";
 import NavBar from "./Navbar";
+import Bakeware from "./Bakeware";
+import Cutlery from "./Cutlery";
+import Kitchen from "./Kitchen";
+import Knives from "./Knives";
 import Brand from "./Brand";
 import MainContent from "./MainContent";
 import Checkout from "./Checkout";
@@ -31,10 +35,6 @@ function Layout() {
     setCart([...cart, product]);
     setCounter(counter + 1);
     alert("Added to cart!");
-    /*setNotification("Added to cart!");
-    setTimeout(() => {
-      setNotification(null);
-    }, 1500);*/
   }
 
   /* function to handle the click event to delete from cart
@@ -50,7 +50,14 @@ function Layout() {
       <NavBar />
       {showBrandComponent && <Brand />}
       <Routes>
-        <Route path="/" element={<MainContent addToCart={addToCart} />} />
+        <Route
+          path="/"
+          element={<MainContent addToCart={addToCart} heading={"Cookware"} />}
+        />
+        <Route path="/bakeware" element={<Bakeware addToCart={addToCart} />} />
+        <Route path="/cutlery" element={<Cutlery addToCart={addToCart} />} />
+        <Route path="/kitchen" element={<Kitchen addToCart={addToCart} />} />
+        <Route path="/knives" element={<Knives addToCart={addToCart} />} />
         <Route path="/checkout" element={<Checkout cart={cart} />} />
       </Routes>
       <Footer />

@@ -13,10 +13,6 @@ function Checkout({ cart }) {
     alert("Promo code applied!");
   }
 
-  /*const totalItem = cart.reduce((accumulator, currentItem) => {
-    return acc
-  })*/
-
   return (
     <div className="checkout-container">
       <main>

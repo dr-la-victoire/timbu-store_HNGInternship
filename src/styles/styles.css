@@ -38,6 +38,14 @@ header {
   align-items: center;
 }
 
+.nav-btn .line {
+  display: none;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+}
+
 .header-left {
   display: flex;
   justify-content: space-between;
@@ -92,16 +100,22 @@ ul {
   list-style-type: none;
 }
 
-ul a {
+.nav ul li,
+.nav ul a {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
   transition: padding-bottom 0.3s ease;
 }
 
-ul a:hover {
+.nav ul li:hover {
   border-bottom: 2px solid #fff;
   padding-bottom: 10px;
+}
+
+.active {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 5px;
 }
 
 /* BRAND STYLES */
@@ -478,6 +492,32 @@ th {
 }
 
 /* MEDIA QUERIES FOR DIFFERENT SCREEN SIZES */
+
+@media screen and (max-width: 2000px) {
+  .cart-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product {
+    width: 50%;
+  }
+
+  .order {
+    margin-bottom: 1em;
+  }
+
+  .checkout-button {
+    margin-top: 1em;
+    width: 100%;
+  }
+
+  .promo-code button {
+    margin-left: 0.5em;
+  }
+}
+
 @media (max-width: 1300px) {
   .header-left {
     width: 50%;
@@ -523,31 +563,6 @@ th {
   .footer-link-list ul li {
     margin: 1em 0;
     text-align: center;
-  }
-}
-
-@media screen and (max-width: 2000px) {
-  .cart-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .product {
-    width: 50%;
-  }
-
-  .order {
-    margin-bottom: 1em;
-  }
-
-  .checkout-button {
-    margin-top: 1em;
-    width: 100%;
-  }
-
-  .promo-code button {
-    margin-left: 0.5em;
   }
 }
 
@@ -597,6 +612,12 @@ th {
 
   .cart-content {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cart-list {
+    margin-left: 0;
   }
 
   .footer-link-list {
@@ -746,7 +767,7 @@ th {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .header-left {
     width: 100%;
     flex-direction: row;
@@ -757,6 +778,11 @@ th {
     width: 100%;
     justify-content: space-between;
     margin-right: 1em;
+  }
+
+  .nav-btn .line {
+    display: flex;
+    margin-left: 1em;
   }
 
   .nav ul {
@@ -795,6 +821,16 @@ th {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .cart-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .other-desc button {
@@ -859,4 +895,20 @@ th {
 .address {
   margin-top: 1em;
   margin-left: 1em;
+}
+
+@media screen and (max-width: 380px) {
+  .header-icons p {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 350px) {
+  .header-left h1 {
+    font-size: 1rem;
+  }
+
+  .header-icons p {
+    font-size: 0.5rem;
+  }
 }

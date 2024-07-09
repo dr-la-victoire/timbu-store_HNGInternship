@@ -10,7 +10,7 @@ import BronzePans from "./Images/bronze-pans.jpg";
 import OpenPot from "./Images/open-pot.jpg";
 import MainElements from "./MainElements";
 
-const MainContent = ({ addToCart }) => {
+const MainContent = ({ addToCart, heading }) => {
   const products = [
     {
       id: 1,
@@ -42,7 +42,7 @@ const MainContent = ({ addToCart }) => {
 
   return (
     <main>
-      <MainText />
+      <MainText heading={heading}/>
       <div className="grid-container">
         {products.map((product) => (
           <div key={product.id}>
